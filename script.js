@@ -86,4 +86,39 @@ function sumTwoSmallestNums(arr) {
 }
 
 
-//
+//Check for Anagrams
+function isAnagram(s1, s2) {
+    var str1 = s1.toLowerCase().split("").sort().join("");
+    var str2 = s2.toLowerCase().split("").sort().join("");
+return str1 === str2? true : false
+}
+
+
+//Create a function that takes a string, checks if it has the same number of 'x's and 'o's and returns either true or false.
+function XO(str) {
+    let x = str.toLowerCase().split('').filter(x => x === 'x').length;
+    let o = str.toLowerCase().split('').filter(x => x === 'o').length;
+    return x === o;
+}
+
+
+//function that alternates the case of the characters in a string.
+function alternatingCaps(str) {
+    return str.split('').map((c, i) => {
+        return (i % 2 === 0) ? c.toUpperCase() : c.toLowerCase();
+    }).join('');
+}
+
+
+//Check String for Spaces
+function hasSpaces(str) {
+    return str.includes(" ")
+}
+
+
+//Capitalize the First Letter of Each Word
+function makeTitle(str) {
+	return str
+        .split(' ')
+        .map(word =>  word[0].toUpperCase() + word.substr(1)).join(' ');
+}
